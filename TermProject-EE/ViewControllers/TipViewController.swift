@@ -8,11 +8,40 @@
 import UIKit
 
 class TipViewController: UIViewController {
+    
+    var recipeDataSource = RecipeDataSource()
 
+    @IBOutlet weak var tipPicker: UIPickerView!
+    @IBOutlet weak var learnHowButton: UIButton!
+    
+    var pickerData: [String] = []
+    var selectedTip: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        recipeDataSource.delegate = self
 
-        // Do any additional setup after loading the view.
+        pickerData = ["Chopping", "Peeling", "Baking", "Boiling", "Blending", "Frying", "Grilling", "Seasoning", "Slicing", "Sauteing"]
+        
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+   
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    // Select edildiğinde aktive olan yer burası -> data load eklenecek
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedTip = pickerData[row]
+        print(selectedTip)
     }
     
 
@@ -26,4 +55,10 @@ class TipViewController: UIViewController {
     }
     */
 
+}
+
+
+extension TipViewController: RecipeDataSourceDelegate {
+    
+    func recipeListLoaded() {}
 }

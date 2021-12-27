@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,35 +98,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KF-oc-yCq">
-                                <rect key="frame" x="133" y="460" width="148" height="30"/>
-                                <menu key="menu" id="3w9-fH-1UU">
-                                    <children>
-                                        <command title="How to Chop" id="Qqw-Kf-FCz"/>
-                                        <command title="How to Peel" id="z0R-88-PXg"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Select Tip of the Day!"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPl-jc-IEK">
-                                <rect key="frame" x="159" y="583" width="97" height="31"/>
+                                <rect key="frame" x="147" y="583" width="120" height="37"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Learn How!"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Learn How!">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="AlS-qI-Mkn" kind="show" id="Y5c-ak-z3G"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Xv-Ly-xfd">
+                                <rect key="frame" x="47" y="262" width="320" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select tip of the day!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXF-MS-0kc">
+                                <rect key="frame" x="105.5" y="166" width="203" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tm9-17-8dI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9KF-oc-yCq" firstAttribute="centerX" secondItem="tm9-17-8dI" secondAttribute="centerX" id="8v1-3j-E8V"/>
-                            <constraint firstItem="VPl-jc-IEK" firstAttribute="top" secondItem="9KF-oc-yCq" secondAttribute="bottom" constant="93" id="CNn-HN-5o5"/>
+                            <constraint firstItem="eXF-MS-0kc" firstAttribute="top" secondItem="tm9-17-8dI" secondAttribute="top" constant="78" id="NEb-NN-Q3N"/>
+                            <constraint firstItem="5Xv-Ly-xfd" firstAttribute="top" secondItem="eXF-MS-0kc" secondAttribute="bottom" constant="68" id="QV5-Ua-Wxg"/>
+                            <constraint firstItem="eXF-MS-0kc" firstAttribute="centerX" secondItem="tm9-17-8dI" secondAttribute="centerX" id="Qgk-Rd-nSK"/>
                             <constraint firstItem="VPl-jc-IEK" firstAttribute="centerX" secondItem="tm9-17-8dI" secondAttribute="centerX" id="dLD-bY-es6"/>
-                            <constraint firstItem="9KF-oc-yCq" firstAttribute="centerY" secondItem="tm9-17-8dI" secondAttribute="centerY" id="ecS-Il-JdG"/>
+                            <constraint firstItem="VPl-jc-IEK" firstAttribute="top" secondItem="5Xv-Ly-xfd" secondAttribute="bottom" constant="105" id="jtd-oK-Vhs"/>
+                            <constraint firstItem="5Xv-Ly-xfd" firstAttribute="centerX" secondItem="tm9-17-8dI" secondAttribute="centerX" id="yVF-1v-UkO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vXb-Ay-HNb"/>
+                    <connections>
+                        <outlet property="learnHowButton" destination="VPl-jc-IEK" id="qe9-NF-71z"/>
+                        <outlet property="tipPicker" destination="5Xv-Ly-xfd" id="D12-rm-1f8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSe-hi-e1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,14 +146,43 @@
                     <view key="view" contentMode="scaleToFill" id="aSX-vE-21H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the meal type!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gan-vT-vez">
+                                <rect key="frame" x="99" y="141" width="216.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Xc-Hr-bPT">
+                                <rect key="frame" x="47" y="238" width="320" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wait for a suggestion!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fw5-wy-DEK">
+                                <rect key="frame" x="100" y="537" width="214.5" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="r3T-db-h9C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gan-vT-vez" firstAttribute="centerX" secondItem="r3T-db-h9C" secondAttribute="centerX" id="FMo-h8-0Ze"/>
+                            <constraint firstItem="8Xc-Hr-bPT" firstAttribute="top" secondItem="Gan-vT-vez" secondAttribute="bottom" constant="68" id="JoA-Zc-fSr"/>
+                            <constraint firstItem="Gan-vT-vez" firstAttribute="top" secondItem="r3T-db-h9C" secondAttribute="top" constant="53" id="L83-G1-Vvf"/>
+                            <constraint firstItem="8Xc-Hr-bPT" firstAttribute="centerX" secondItem="r3T-db-h9C" secondAttribute="centerX" id="MKV-e3-rUO"/>
+                            <constraint firstItem="fw5-wy-DEK" firstAttribute="centerX" secondItem="r3T-db-h9C" secondAttribute="centerX" id="b8B-HK-00I"/>
+                            <constraint firstItem="fw5-wy-DEK" firstAttribute="top" secondItem="8Xc-Hr-bPT" secondAttribute="bottom" constant="83" id="odb-av-khg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C3m-du-v36"/>
+                    <connections>
+                        <outlet property="mealTypePicker" destination="8Xc-Hr-bPT" id="jdi-sf-lTs"/>
+                        <outlet property="randomSuggestionLabel" destination="fw5-wy-DEK" id="ccS-oI-BSu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJ1-fo-9ko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="796"/>
+            <point key="canvasLocation" x="869.56521739130437" y="795.53571428571422"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="RMC-bo-4MJ">

@@ -8,12 +8,43 @@
 import UIKit
 
 class SuggestionViewController: UIViewController {
-
+    
+    @IBOutlet weak var randomSuggestionLabel: UILabel!
+    @IBOutlet weak var mealTypePicker: UIPickerView!
+    
+    var recipeDataSource = RecipeDataSource()
+    var pickerData: [String] = []
+    var selectedMealType: String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        recipeDataSource.delegate = self
+        
+        pickerData = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"]
     }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+   
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    // Select edildiğinde aktive olan yer burası -> data load eklenecek
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedMealType = pickerData[row]
+        print(selectedMealType)
+        randomSuggestionLabel.text = selectedMealType
+    }
+    
     
 
     /*
@@ -27,3 +58,9 @@ class SuggestionViewController: UIViewController {
     */
 
 }
+
+extension SuggestionViewController: RecipeDataSourceDelegate {
+   
+    func recipeListLoaded() {}
+}
+
