@@ -14,3 +14,4 @@ struct Recipe: Codable{
     let healthLabels: [String]
     
 }
+

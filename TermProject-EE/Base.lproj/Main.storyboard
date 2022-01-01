@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cIf-ws-ZH5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cIf-ws-ZH5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -191,14 +192,223 @@
                     <view key="view" contentMode="scaleToFill" id="DmR-St-GEO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2m-6w-86e" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="50" y="528" width="99" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Vegan">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz2-9B-nvM" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="264.5" y="479.5" width="99.5" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Paleo">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I94-3h-tk3" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="50" y="576.5" width="99" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Low-Carb">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi0-sr-J4K" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="253" y="576.5" width="111" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Alcohol-Free">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-To-f2g" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="264.5" y="528" width="99.5" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Low-Sugar">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gez-uJ-2DN" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="50" y="479.5" width="99" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Vegetarian">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWT-qK-kOi" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="50" y="744.5" width="99" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Eggs">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwU-Bs-uUr" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="253" y="696" width="111" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Wheat">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohS-gc-9eD" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="50" y="793" width="99" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Soy">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO1-GC-Ytf" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="253" y="793" width="111" height="29"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Fish">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28R-zs-FMX" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="267" y="744.5" width="83.5" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Peanuts">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPs-1S-SRV">
+                                <rect key="frame" x="174.5" y="635" width="65.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qp8-Zd-dGY" customClass="CheckBox" customModule="TermProject_EE" customModuleProvider="target">
+                                <rect key="frame" x="50" y="696" width="99" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="leading" title="" subtitle="Gluten">
+                                    <imageReference key="image" image="square" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTt-6j-xoy">
+                                <rect key="frame" x="176" y="108" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ndj-vo-Be8">
+                                <rect key="frame" x="40" y="169" width="119" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXo-Uf-YlP">
+                                <rect key="frame" x="255.5" y="169" width="117.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-sj-TkB">
+                                <rect key="frame" x="164.5" y="243" width="85.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Up To" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4r4-FH-meJ">
+                                <rect key="frame" x="100" y="304" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoU-kl-6D0">
+                                <rect key="frame" x="191.5" y="428.5" width="31" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jD9-je-rBr">
+                                <rect key="frame" x="173.5" y="847" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="VCE-n6-Hku" kind="show" id="7d6-QJ-uzj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sDP-hD-JGW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sDP-hD-JGW" firstAttribute="trailing" secondItem="fwU-Bs-uUr" secondAttribute="trailing" constant="50" id="2mW-nt-B0l"/>
+                            <constraint firstItem="uWT-qK-kOi" firstAttribute="centerY" secondItem="28R-zs-FMX" secondAttribute="centerY" id="5Gd-0u-uGU"/>
+                            <constraint firstItem="4r4-FH-meJ" firstAttribute="centerX" secondItem="SoU-kl-6D0" secondAttribute="centerX" id="5S6-ET-LdG"/>
+                            <constraint firstItem="sDP-hD-JGW" firstAttribute="trailing" secondItem="qO1-GC-Ytf" secondAttribute="trailing" constant="50" id="5fJ-9i-4gX"/>
+                            <constraint firstItem="Ndj-vo-Be8" firstAttribute="leading" secondItem="sDP-hD-JGW" secondAttribute="leading" constant="40" id="6bS-Ja-UdH"/>
+                            <constraint firstItem="28R-zs-FMX" firstAttribute="top" secondItem="fwU-Bs-uUr" secondAttribute="bottom" constant="20" id="6ko-Kl-slG"/>
+                            <constraint firstItem="sXo-Uf-YlP" firstAttribute="centerX" secondItem="Kz2-9B-nvM" secondAttribute="centerX" id="7mb-gR-1lE"/>
+                            <constraint firstItem="pTt-6j-xoy" firstAttribute="centerX" secondItem="sDP-hD-JGW" secondAttribute="centerX" id="7sf-Nm-589"/>
+                            <constraint firstItem="Ndj-vo-Be8" firstAttribute="top" secondItem="pTt-6j-xoy" secondAttribute="bottom" constant="40" id="8Y7-ad-iCJ"/>
+                            <constraint firstItem="v2m-6w-86e" firstAttribute="centerY" secondItem="FP2-To-f2g" secondAttribute="centerY" id="AGN-BP-Ftu"/>
+                            <constraint firstItem="I94-3h-tk3" firstAttribute="centerX" secondItem="v2m-6w-86e" secondAttribute="centerX" id="AQZ-wQ-uqa"/>
+                            <constraint firstItem="fUA-sj-TkB" firstAttribute="centerX" secondItem="pTt-6j-xoy" secondAttribute="centerX" id="BL9-cf-Jww"/>
+                            <constraint firstItem="RPs-1S-SRV" firstAttribute="top" secondItem="Gi0-sr-J4K" secondAttribute="bottom" constant="30" id="BLn-fk-l4s"/>
+                            <constraint firstItem="ohS-gc-9eD" firstAttribute="top" secondItem="uWT-qK-kOi" secondAttribute="bottom" constant="20" id="D3C-zD-YXP"/>
+                            <constraint firstItem="fwU-Bs-uUr" firstAttribute="centerX" secondItem="Gi0-sr-J4K" secondAttribute="centerX" id="DrD-56-WBQ"/>
+                            <constraint firstItem="Gez-uJ-2DN" firstAttribute="centerY" secondItem="Kz2-9B-nvM" secondAttribute="centerY" id="Ett-S9-IkZ"/>
+                            <constraint firstItem="ohS-gc-9eD" firstAttribute="centerY" secondItem="qO1-GC-Ytf" secondAttribute="centerY" id="G69-7R-eOi"/>
+                            <constraint firstItem="I94-3h-tk3" firstAttribute="leading" secondItem="sDP-hD-JGW" secondAttribute="leading" constant="50" id="Hqd-RY-Q9A"/>
+                            <constraint firstItem="Gez-uJ-2DN" firstAttribute="leading" secondItem="sDP-hD-JGW" secondAttribute="leading" constant="50" id="KMw-pu-PXm"/>
+                            <constraint firstItem="sXo-Uf-YlP" firstAttribute="centerY" secondItem="Ndj-vo-Be8" secondAttribute="centerY" id="Kps-WB-dei"/>
+                            <constraint firstItem="sDP-hD-JGW" firstAttribute="trailing" secondItem="FP2-To-f2g" secondAttribute="trailing" constant="50" id="MFr-Ac-ezi"/>
+                            <constraint firstItem="4r4-FH-meJ" firstAttribute="centerX" secondItem="fUA-sj-TkB" secondAttribute="centerX" id="MHL-q5-l6B"/>
+                            <constraint firstItem="fwU-Bs-uUr" firstAttribute="top" secondItem="RPs-1S-SRV" secondAttribute="bottom" constant="40" id="Pee-pl-Wam"/>
+                            <constraint firstItem="qp8-Zd-dGY" firstAttribute="centerX" secondItem="I94-3h-tk3" secondAttribute="centerX" id="R2c-IF-OZY"/>
+                            <constraint firstItem="FP2-To-f2g" firstAttribute="top" secondItem="Kz2-9B-nvM" secondAttribute="bottom" constant="20" id="RXI-2y-HvI"/>
+                            <constraint firstItem="jD9-je-rBr" firstAttribute="top" secondItem="ohS-gc-9eD" secondAttribute="bottom" constant="25" id="TYp-3T-R3q"/>
+                            <constraint firstItem="v2m-6w-86e" firstAttribute="leading" secondItem="sDP-hD-JGW" secondAttribute="leading" constant="50" id="V5r-jT-FTf"/>
+                            <constraint firstItem="Ndj-vo-Be8" firstAttribute="centerX" secondItem="Gez-uJ-2DN" secondAttribute="centerX" id="Vpv-N0-jru"/>
+                            <constraint firstItem="qp8-Zd-dGY" firstAttribute="leading" secondItem="sDP-hD-JGW" secondAttribute="leading" constant="50" id="Yyg-GP-Nfr"/>
+                            <constraint firstItem="28R-zs-FMX" firstAttribute="centerX" secondItem="fwU-Bs-uUr" secondAttribute="centerX" id="a4c-kz-88h"/>
+                            <constraint firstItem="sDP-hD-JGW" firstAttribute="trailing" secondItem="sXo-Uf-YlP" secondAttribute="trailing" constant="41" id="cDP-a1-nMY"/>
+                            <constraint firstItem="uWT-qK-kOi" firstAttribute="top" secondItem="qp8-Zd-dGY" secondAttribute="bottom" constant="20" id="cwP-1h-KPa"/>
+                            <constraint firstItem="qO1-GC-Ytf" firstAttribute="top" secondItem="28R-zs-FMX" secondAttribute="bottom" constant="20" id="etV-vw-WE0"/>
+                            <constraint firstItem="4r4-FH-meJ" firstAttribute="top" secondItem="fUA-sj-TkB" secondAttribute="bottom" constant="40" id="f21-OH-baa"/>
+                            <constraint firstItem="I94-3h-tk3" firstAttribute="top" secondItem="v2m-6w-86e" secondAttribute="bottom" constant="20" id="fCd-tW-7QZ"/>
+                            <constraint firstItem="qO1-GC-Ytf" firstAttribute="centerX" secondItem="28R-zs-FMX" secondAttribute="centerX" id="ftL-DO-Bf4"/>
+                            <constraint firstItem="RPs-1S-SRV" firstAttribute="centerX" secondItem="SoU-kl-6D0" secondAttribute="centerX" id="hJE-qU-5GM"/>
+                            <constraint firstItem="sDP-hD-JGW" firstAttribute="trailing" secondItem="4r4-FH-meJ" secondAttribute="trailing" constant="100" id="jVV-Lv-bLe"/>
+                            <constraint firstItem="uWT-qK-kOi" firstAttribute="leading" secondItem="sDP-hD-JGW" secondAttribute="leading" constant="50" id="jVc-fZ-UVS"/>
+                            <constraint firstItem="jD9-je-rBr" firstAttribute="centerX" secondItem="sDP-hD-JGW" secondAttribute="centerX" id="k8Y-bF-yq2"/>
+                            <constraint firstItem="ohS-gc-9eD" firstAttribute="centerX" secondItem="uWT-qK-kOi" secondAttribute="centerX" id="nEw-NR-kUe"/>
+                            <constraint firstItem="FP2-To-f2g" firstAttribute="centerX" secondItem="Kz2-9B-nvM" secondAttribute="centerX" id="pHN-Qa-PEq"/>
+                            <constraint firstItem="v2m-6w-86e" firstAttribute="centerX" secondItem="Gez-uJ-2DN" secondAttribute="centerX" id="pea-J6-egM"/>
+                            <constraint firstItem="Gez-uJ-2DN" firstAttribute="top" secondItem="SoU-kl-6D0" secondAttribute="bottom" constant="30" id="r6e-8J-IiF"/>
+                            <constraint firstItem="pTt-6j-xoy" firstAttribute="top" secondItem="sDP-hD-JGW" secondAttribute="top" constant="20" id="s82-Z8-W2a"/>
+                            <constraint firstItem="sDP-hD-JGW" firstAttribute="trailing" secondItem="Kz2-9B-nvM" secondAttribute="trailing" constant="50" id="tHO-1B-RcA"/>
+                            <constraint firstItem="SoU-kl-6D0" firstAttribute="centerX" secondItem="sDP-hD-JGW" secondAttribute="centerX" id="tWf-jX-nIB"/>
+                            <constraint firstItem="sDP-hD-JGW" firstAttribute="trailing" secondItem="Gi0-sr-J4K" secondAttribute="trailing" constant="50" id="vvR-8A-drS"/>
+                            <constraint firstItem="uWT-qK-kOi" firstAttribute="centerX" secondItem="qp8-Zd-dGY" secondAttribute="centerX" id="x12-sE-UWg"/>
+                            <constraint firstItem="ohS-gc-9eD" firstAttribute="leading" secondItem="sDP-hD-JGW" secondAttribute="leading" constant="50" id="x6a-lM-2G0"/>
+                            <constraint firstItem="jD9-je-rBr" firstAttribute="bottom" secondItem="sDP-hD-JGW" secondAttribute="bottom" constant="16" id="xXJ-QT-Bga"/>
+                            <constraint firstItem="fUA-sj-TkB" firstAttribute="centerX" secondItem="sDP-hD-JGW" secondAttribute="centerX" id="y0a-KX-FcA"/>
+                            <constraint firstItem="I94-3h-tk3" firstAttribute="centerY" secondItem="Gi0-sr-J4K" secondAttribute="centerY" id="yc2-9g-VLN"/>
+                            <constraint firstItem="fUA-sj-TkB" firstAttribute="top" secondItem="sXo-Uf-YlP" secondAttribute="bottom" constant="40" id="z6Z-0g-x81"/>
+                            <constraint firstItem="Gi0-sr-J4K" firstAttribute="top" secondItem="FP2-To-f2g" secondAttribute="bottom" constant="20" id="zBg-V9-uGb"/>
+                            <constraint firstItem="qp8-Zd-dGY" firstAttribute="centerY" secondItem="fwU-Bs-uUr" secondAttribute="centerY" id="zUZ-nb-2vU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5CP-68-HKv"/>
+                    <connections>
+                        <outlet property="alcoholFreeBox" destination="Gi0-sr-J4K" id="8gz-3Z-nrF"/>
+                        <outlet property="eggsBox" destination="uWT-qK-kOi" id="aJB-kP-Hd7"/>
+                        <outlet property="fishBox" destination="qO1-GC-Ytf" id="IkV-0R-QWv"/>
+                        <outlet property="fromTextField" destination="Ndj-vo-Be8" id="2Lw-Ly-0Sk"/>
+                        <outlet property="glutenBox" destination="qp8-Zd-dGY" id="B3i-sQ-Lej"/>
+                        <outlet property="highProteinBox" destination="FP2-To-f2g" id="N1M-29-4Qc"/>
+                        <outlet property="ingredientNoTextField" destination="4r4-FH-meJ" id="ohW-kN-Q1D"/>
+                        <outlet property="lowSugarBox" destination="FP2-To-f2g" id="wHt-yM-fkL"/>
+                        <outlet property="lowcarbBox" destination="I94-3h-tk3" id="tr3-x8-79z"/>
+                        <outlet property="paleoBox" destination="Kz2-9B-nvM" id="oK4-eW-Z4l"/>
+                        <outlet property="peanutsBox" destination="28R-zs-FMX" id="5FV-21-eDn"/>
+                        <outlet property="soyBox" destination="ohS-gc-9eD" id="jEZ-VL-pfk"/>
+                        <outlet property="toTextField" destination="sXo-Uf-YlP" id="gQA-xq-OXQ"/>
+                        <outlet property="veganBox" destination="v2m-6w-86e" id="mgf-b4-Hpw"/>
+                        <outlet property="vegetarianBox" destination="Gez-uJ-2DN" id="bOk-9y-86v"/>
+                        <outlet property="wheatBox" destination="fwU-Bs-uUr" id="S4W-tf-JFT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwH-SQ-32h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="-625"/>
+            <point key="canvasLocation" x="869.56521739130437" y="-625.44642857142856"/>
         </scene>
         <!--Dish Detail View Controller-->
         <scene sceneID="lOT-Ta-qvx">
@@ -210,6 +420,7 @@
                         <viewLayoutGuide key="safeArea" id="5b1-pV-awA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="V64-mt-44b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8o-mh-XtZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,13 +439,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="85" id="0nG-OV-Lid" customClass="DishTableViewCell" customModule="TermProject_EE" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dishCell" rowHeight="85" id="0nG-OV-Lid" customClass="DishTableViewCell" customModule="TermProject_EE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0nG-OV-Lid" id="Hl6-N9-bp5">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lVY-sJ-Hni" kind="show" id="gZG-J5-6Nf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -242,6 +456,7 @@
                         <viewLayoutGuide key="safeArea" id="rhd-Ym-o1t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eh9-s8-4UP"/>
                     <connections>
                         <outlet property="DishTableView" destination="9yI-Ei-Ppe" id="PSw-7m-FOH"/>
                     </connections>
@@ -284,6 +499,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
