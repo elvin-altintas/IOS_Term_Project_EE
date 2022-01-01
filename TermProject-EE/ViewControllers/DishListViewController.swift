@@ -25,6 +25,7 @@ class DishListViewController: UIViewController {
         self.title = "Dish List"
         // Do any additional setup after loading the view.
         recipeDataSource.delegate = self
+        
 
     }
     
@@ -35,8 +36,9 @@ class DishListViewController: UIViewController {
            let selectedFromCalories = fromCalories,
            let selectedToCalories = toCalories{
             recipeDataSource.loadRecipeList(allergyDict: selectedHealthLabels, fromCalories: selectedFromCalories, toCalories: selectedToCalories, ingredientNumber: selectedIngredientNumber, dietDict: selectedDietLabels)
+            
         }
-
+        
         
     }
     
@@ -55,7 +57,7 @@ class DishListViewController: UIViewController {
 
 extension DishListViewController: RecipeDataSourceDelegate {
     func recipeListLoaded() {
-        <#code#>
+        print(recipeDataSource.recipeArray)
     }
     
   

@@ -92,16 +92,17 @@ class FilterViewController: UIViewController {
         healthLabels["Soy-Free"] = soyBox.isChecked
         healthLabels["Gluten-Free"] = glutenBox.isChecked
         healthLabels["Wheat-Free"] = wheatBox.isChecked
+        healthLabels["Alcohol-Free"] = alcoholFreeBox.isChecked
+        healthLabels["Vegan"] = veganBox.isChecked
+        healthLabels["Vegetarian"] = vegetarianBox.isChecked
+        healthLabels["Paleo"] = paleoBox.isChecked
+        healthLabels["Low-Sugar"] = lowSugarBox.isChecked
+
         return healthLabels
     }
     func getDietLabels() -> [String:Bool]? {
         var dietLabels : [String: Bool] = [:]
         dietLabels["Low-Carb"] = lowcarbBox.isChecked
-        dietLabels["Vegan"] = veganBox.isChecked
-        dietLabels["Alcohol-Free"] = alcoholFreeBox.isChecked
-        dietLabels["Low-Sugar"] = lowSugarBox.isChecked
-        dietLabels["Vegetarian"] = vegetarianBox.isChecked
-        dietLabels["Paleo"] = paleoBox.isChecked
         return dietLabels
     }
     

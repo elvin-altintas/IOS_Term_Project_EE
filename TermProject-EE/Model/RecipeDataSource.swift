@@ -12,9 +12,11 @@ import UIKit
 
 //https://api.edamam.com/api/recipes/v2?type=public&app_id=b653a986&app_key=19de07e36c468998b5ed58ff3c5d2384&ingr=5&diet=low-carb&diet=low-fat&health=soy-free&health=sugar-conscious&health=sulfite-free&calories=100-1000
 
-class RecipeDataSource{
 
-    private var recipeArray: [Recipe] = []
+class RecipeDataSource{
+    private var count: Int?
+    //private var recipeArray: [Recipe] = []
+    var recipeArray: [Recipe] = []
     private var mealType: String =  "Dinner"
     var delegate: RecipeDataSourceDelegate?
     private let baseURL = "https://api.edamam.com/api/recipes/v2?type=public&app_id=2a3787d1&app_key=b97d50b316555ab070db21e485525b74"
@@ -29,7 +31,7 @@ class RecipeDataSource{
         var addition = ""
         for key in dietDict.keys {
             if dietDict[key] == true{
-                addition += "&diet" + key.lowercased()
+                addition += "&diet=" + key.lowercased()
             }
         }
         return currentURL + addition
@@ -39,7 +41,7 @@ class RecipeDataSource{
         var addition = ""
         for key in allergyDict.keys {
             if allergyDict[key] == true{
-                addition += "&health" + key.lowercased() + "-free"
+                addition += "&health=" + key.lowercased() 
             }
         }
         return currentURL + addition
@@ -55,24 +57,21 @@ class RecipeDataSource{
     }
     
     func finalizeURL(currentURL: String,allergyDict: [String: Bool],fromCalories: Int, toCalories: Int, ingredientNumber: Int, dietDict: [String: Bool]) -> String{
-        let addition = getUsedParameter()
-        var url = "\(currentURL)&\(addition)"
+        //let addition = getUsedParameter()
+        //var url = "\(currentURL)&\(addition)"
+        var url = currentURL
         url  = addCaloriesToURL(currentURL: url, fromCalories: fromCalories, toCalories: toCalories)
         url = addDietToURL(currentURL: url, dietDict: dietDict)
         url = addAllergyToURL(currentURL: url, allergyDict: allergyDict)
-        url = addNumberofIngredientsToURL(currentURL: <#T##String#>, ingredientNumber: <#T##Int#>)
+        url = addNumberofIngredientsToURL(currentURL: url, ingredientNumber: ingredientNumber)
         return url
     }
     
 
-    
-    
-    
-
-    
     func loadRecipeList(allergyDict: [String: Bool],fromCalories: Int, toCalories: Int, ingredientNumber: Int, dietDict: [String: Bool]) {
         let urlSession = URLSession.shared
-        if let url = URL(string: finalizeURL(currentURL: baseURL, allergyDict: allergyDict, fromCalories: fromCalories, toCalories: toCalories, ingredientNumber: ingredientNumber, dietDict: dietDict)){
+        let finalizedUrl = finalizeURL(currentURL: baseURL, allergyDict: allergyDict, fromCalories: fromCalories, toCalories: toCalories, ingredientNumber: ingredientNumber, dietDict: dietDict)
+        if let url = URL(string: finalizedUrl){
         //if let url = URL(string: "https://api.edamam.com/api/recipes/v2?type=public&app_id=2a3787d1&app_key=b97d50b316555ab070db21e485525b74&mealType=Dinner"){
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "GET"
@@ -80,8 +79,11 @@ class RecipeDataSource{
             let dataTask = urlSession.dataTask(with: urlRequest) { data, response, error in
                 let decoder = JSONDecoder()
                 if let data = data {
-                    let recipeArrayFromNetwork = try! decoder.decode([Recipe].self, from: data)
-                        self.recipeArray = recipeArrayFromNetwork
+                    let recipeCountDictFromNetwork = try! decoder.decode(RecipeCountDict.self, from: data)
+                    self.count = recipeCountDictFromNetwork.count
+                    self.recipeArray = recipeCountDictFromNetwork.recipeList.map { $0.recipe }
+                    print(self.recipeArray)
+                    print(finalizedUrl)
                         DispatchQueue.main.async {
                             self.delegate?.recipeListLoaded()
                         }
@@ -109,3 +111,6 @@ class RecipeDataSource{
     
     
 }
+
+
+  

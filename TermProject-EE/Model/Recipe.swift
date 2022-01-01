@@ -15,3 +15,16 @@ struct Recipe: Codable{
     
 }
 
+struct UpperRecipe:Codable{
+    let recipe: Recipe
+}
+
+struct RecipeCountDict:Codable{
+    let count: Int
+    let recipeList: [UpperRecipe]
+    
+    enum CodingKeys: String,CodingKey{
+        case count
+        case recipeList = "hits"
+    }
+}

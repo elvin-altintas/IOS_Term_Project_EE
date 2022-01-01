@@ -393,7 +393,6 @@
                         <outlet property="fishBox" destination="qO1-GC-Ytf" id="IkV-0R-QWv"/>
                         <outlet property="fromTextField" destination="Ndj-vo-Be8" id="2Lw-Ly-0Sk"/>
                         <outlet property="glutenBox" destination="qp8-Zd-dGY" id="B3i-sQ-Lej"/>
-                        <outlet property="highProteinBox" destination="FP2-To-f2g" id="N1M-29-4Qc"/>
                         <outlet property="ingredientNoTextField" destination="4r4-FH-meJ" id="ohW-kN-Q1D"/>
                         <outlet property="lowSugarBox" destination="FP2-To-f2g" id="wHt-yM-fkL"/>
                         <outlet property="lowcarbBox" destination="I94-3h-tk3" id="tr3-x8-79z"/>
