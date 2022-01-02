@@ -9,6 +9,9 @@ import UIKit
 
 class DishTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dishImage: UIImageView!
+    @IBOutlet weak var dishLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

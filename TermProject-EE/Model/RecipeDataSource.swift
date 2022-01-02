@@ -15,8 +15,7 @@ import UIKit
 
 class RecipeDataSource{
     private var count: Int?
-    //private var recipeArray: [Recipe] = []
-    var recipeArray: [Recipe] = []
+    private var recipeArray: [Recipe] = []
     private var mealType: String =  "Dinner"
     var delegate: RecipeDataSourceDelegate?
     private let baseURL = "https://api.edamam.com/api/recipes/v2?type=public&app_id=2a3787d1&app_key=b97d50b316555ab070db21e485525b74"
@@ -82,8 +81,8 @@ class RecipeDataSource{
                     let recipeCountDictFromNetwork = try! decoder.decode(RecipeCountDict.self, from: data)
                     self.count = recipeCountDictFromNetwork.count
                     self.recipeArray = recipeCountDictFromNetwork.recipeList.map { $0.recipe }
-                    print(self.recipeArray)
-                    print(finalizedUrl)
+                   // print(self.recipeArray)
+                //print(finalizedUrl)
                         DispatchQueue.main.async {
                             self.delegate?.recipeListLoaded()
                         }
@@ -93,6 +92,8 @@ class RecipeDataSource{
             dataTask.resume()
         }
     }
+    
+    
     
     
 
@@ -110,6 +111,27 @@ class RecipeDataSource{
     
     
     
+}
+
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
 }
 
 

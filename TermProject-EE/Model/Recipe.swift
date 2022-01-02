@@ -14,7 +14,9 @@ struct Recipe: Codable{
     let healthLabels: [String]
     
 }
-
+struct Image: Codable{
+    
+}
 struct UpperRecipe:Codable{
     let recipe: Recipe
 }
