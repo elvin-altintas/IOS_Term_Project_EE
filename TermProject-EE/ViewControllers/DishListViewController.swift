@@ -57,9 +57,28 @@ class DishListViewController: UIViewController {
 
 extension DishListViewController: RecipeDataSourceDelegate {
     func recipeListLoaded() {
-        print(recipeDataSource.recipeArray)
+        self.DishTableView.reloadData()
+    }
+}
+
+extension DishListViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recipeDataSource.getNumberOfRecipes()
     }
     
     func suggestedRecipeLoaded(recipe: Recipe) {}
    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DishCell", for: indexPath) as! DishTableViewCell
+        let recipe = recipeDataSource.getRecipeWithIndex(index: indexPath.row)
+       
+        cell.dishLabel.text = recipe.label
+        cell.dishImage.downloaded(from: recipe.image)
+        return cell
+    }
+    
 }

@@ -15,7 +15,9 @@ struct Recipe: Codable{
     let url: String //recipe url
     
 }
-
+struct Image: Codable{
+    
+}
 struct UpperRecipe:Codable{
     let recipe: Recipe
 }

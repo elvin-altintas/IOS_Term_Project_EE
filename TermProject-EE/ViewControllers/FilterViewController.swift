@@ -118,7 +118,6 @@ class FilterViewController: UIViewController {
         dishListViewController.ingredientNumber = self.getIngredientNumber()
         dishListViewController.fromCalories = self.getCaloriesFrom()
         dishListViewController.toCalories = self.getCaloriesTo()
-   //  pharmaciesViewController.selectedRegionId = region.Id
     }
     
 

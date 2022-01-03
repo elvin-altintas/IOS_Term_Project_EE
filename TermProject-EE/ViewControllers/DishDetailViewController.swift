@@ -8,7 +8,17 @@
 import UIKit
 
 class DishDetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var dishDetailImage: UIImageView!
+    @IBOutlet weak var ingredientsLabel: UILabel!
+    
+    @IBAction func openRecipeLink(_ sender: UIButton) {
+        if let url = URL(string: "https://www.apple.com") {
+          UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+        
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 

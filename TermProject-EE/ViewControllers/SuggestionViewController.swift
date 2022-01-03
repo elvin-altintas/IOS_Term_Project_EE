@@ -9,7 +9,8 @@ import UIKit
 
 class SuggestionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var randomSuggestionLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var randomSuggestionLabel: UITextView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var mealTypePicker: UIPickerView!
     @IBOutlet weak var urlView: UITextView!
@@ -28,6 +29,8 @@ class SuggestionViewController: UIViewController, UIPickerViewDelegate, UIPicker
         pickerData = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"]
         
         recipeDataSource.delegate = self
+        
+        titleLabel.text = "Select the meal type!"
     
     }
     
@@ -47,18 +50,15 @@ class SuggestionViewController: UIViewController, UIPickerViewDelegate, UIPicker
     // Select edildiğinde aktive olan yer burası -> data load eklenecek
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedMealType = pickerData[row]
-        print(selectedMealType)
-        randomSuggestionLabel.text = selectedMealType
         recipeDataSource.loadSuggestedRecipe(mealType: selectedMealType)
 
     }
     
    /* override func viewWillAppear(_ animated: Bool) {
-        recipeDataSource.loadSuggestedRecipe(mealType: selectedMealType)
+        //recipeDataSource.loadSuggestedRecipe(mealType: selectedMealType)
+        
     }*/
     
-    
-
     /*
     // MARK: - Navigation
 
@@ -76,8 +76,9 @@ extension SuggestionViewController: RecipeDataSourceDelegate {
     
     func suggestedRecipeLoaded(recipe: Recipe) {
         self.urlView.text = "\(recipe.url)"
-        //var url = URL(string: recipe.image)
-        //self.image.image = UIImageView.load(recipe.image)
+        self.image.downloaded(from: recipe.image)
+        self.randomSuggestionLabel.text = recipe.label
+        self.titleLabel.text = "No likey? Select again!"
     }
     
 
