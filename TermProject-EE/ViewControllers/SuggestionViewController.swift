@@ -7,22 +7,28 @@
 
 import UIKit
 
-class SuggestionViewController: UIViewController {
+class SuggestionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var randomSuggestionLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var mealTypePicker: UIPickerView!
+    @IBOutlet weak var urlView: UITextView!
+    
     
     var recipeDataSource = RecipeDataSource()
+    
     var pickerData: [String] = []
     var selectedMealType: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mealTypePicker.dataSource = self
+        self.mealTypePicker.delegate = self
+        pickerData = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"]
         
         recipeDataSource.delegate = self
-        
-        pickerData = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"]
+    
     }
     
     
@@ -43,7 +49,13 @@ class SuggestionViewController: UIViewController {
         selectedMealType = pickerData[row]
         print(selectedMealType)
         randomSuggestionLabel.text = selectedMealType
+        recipeDataSource.loadSuggestedRecipe(mealType: selectedMealType)
+
     }
+    
+   /* override func viewWillAppear(_ animated: Bool) {
+        recipeDataSource.loadSuggestedRecipe(mealType: selectedMealType)
+    }*/
     
     
 
@@ -60,7 +72,16 @@ class SuggestionViewController: UIViewController {
 }
 
 extension SuggestionViewController: RecipeDataSourceDelegate {
-   
     func recipeListLoaded() {}
+    
+    func suggestedRecipeLoaded(recipe: Recipe) {
+        self.urlView.text = "\(recipe.url)"
+        //var url = URL(string: recipe.image)
+        //self.image.image = UIImageView.load(recipe.image)
+    }
+    
+
+    
 }
 
+    

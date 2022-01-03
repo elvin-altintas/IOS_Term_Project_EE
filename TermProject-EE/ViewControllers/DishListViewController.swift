@@ -60,10 +60,6 @@ extension DishListViewController: RecipeDataSourceDelegate {
         print(recipeDataSource.recipeArray)
     }
     
-  
-    
- 
-    
-   
+    func suggestedRecipeLoaded(recipe: Recipe) {}
    
 }

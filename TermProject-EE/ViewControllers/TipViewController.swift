@@ -61,4 +61,5 @@ class TipViewController: UIViewController {
 extension TipViewController: RecipeDataSourceDelegate {
     
     func recipeListLoaded() {}
+    func suggestedRecipeLoaded(recipe: Recipe) {}
 }

@@ -12,6 +12,7 @@ struct Recipe: Codable{
     let image: String
     let dietLabels: [String]
     let healthLabels: [String]
+    let url: String //recipe url
     
 }
 

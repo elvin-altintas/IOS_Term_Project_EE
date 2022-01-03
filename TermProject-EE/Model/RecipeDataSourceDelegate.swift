@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RecipeDataSourceDelegate {
     func recipeListLoaded()
-  //  func suggestedRecipeLoaded()
+    func suggestedRecipeLoaded(recipe: Recipe)
 }
