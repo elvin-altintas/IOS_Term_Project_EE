@@ -12,6 +12,8 @@ class AnimationViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var animationView: UIImageView!
     @IBOutlet weak var potatoView: UIImageView!
+    @IBOutlet weak var breadView: UIImageView!
+    @IBOutlet weak var knifeView: UIImageView!
     
     var selectedTip: String = ""
 
@@ -21,8 +23,12 @@ class AnimationViewController: UIViewController {
         tipLabel.text = "This is how you " + selectedTip.uppercased() + "!"
         animationView.image = UIImage(named: selectedTip)
         potatoView.image = UIImage(named: "Potato")
+        breadView.image = UIImage(named: "Bread")
+        knifeView.image = UIImage(named: "Knife")
         self.animationView.alpha = 1
         self.potatoView.alpha = 0
+        self.breadView.alpha = 0
+        self.knifeView.alpha = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,6 +41,12 @@ class AnimationViewController: UIViewController {
             self.Peel()
         case "Boil":
             self.Boil()
+        case "Slice":
+            self.breadView.alpha = 1
+            self.knifeView.alpha = 1
+            self.Slice()
+        case "Season":
+            self.Season()
         default:
             print("Nothing selected!")
         }
@@ -103,7 +115,49 @@ class AnimationViewController: UIViewController {
                                                 UIView.animate(withDuration: 0.5, delay: 0, options: []){
                                                     self.Boil2()}}}}}}}
     
+   
+    
+    private func Slice1(){
+        self.knifeView.transform = self.knifeView.transform.rotated(by: 0.8)
+    }
+    private func Slice2(){
+        self.knifeView.transform = self.knifeView.transform.rotated(by: -0.8)
+    }
 
+    private func Slice(){
+        UIView.animate(withDuration: 0.7, delay: 0.1, options: []){
+            self.Slice1() } completion: { animated in
+                UIView.animate(withDuration: 0.7, delay: 0.1, options: []){
+                    self.Slice2()}completion: { animated in
+                        UIView.animate(withDuration: 0.7, delay: 0.1, options: []){
+                            self.Slice1()}completion: { animated in
+                                UIView.animate(withDuration: 0.7, delay: 0.1, options: []){
+                                    self.Slice2()}completion: { animated in
+                                        UIView.animate(withDuration: 0.7, delay: 0.1, options: []){
+                                            self.Slice1()}completion: { animated in
+                                                UIView.animate(withDuration: 0.7, delay: 0.1, options: []){
+                                                    self.Slice2()}}}}}}}
+    
+    private func Season1(){
+        self.animationView.transform = self.animationView.transform.rotated(by: -0.3)
+    }
+    private func Season2(){
+        self.animationView.transform = self.animationView.transform.rotated(by: 0.3)
+    }
+
+    private func Season(){
+        UIView.animate(withDuration: 0.5, delay: 0, options: []){
+            self.Season1() } completion: { animated in
+                UIView.animate(withDuration: 0.5, delay: 0, options: []){
+                    self.Season2()}completion: { animated in
+                        UIView.animate(withDuration: 0.5, delay: 0, options: []){
+                            self.Season1()}completion: { animated in
+                                UIView.animate(withDuration: 0.5, delay: 0, options: []){
+                                    self.Season2()}completion: { animated in
+                                        UIView.animate(withDuration: 0.5, delay: 0, options: []){
+                                            self.Season1()}completion: { animated in
+                                                UIView.animate(withDuration: 0.5, delay: 0, options: []){
+                                                    self.Season2()}}}}}}}
     
 
 }

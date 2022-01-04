@@ -25,7 +25,7 @@ class TipViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         self.tipPicker.delegate = self
         
         //pickerData = ["Chopping", "Peeling", "Baking", "Boiling", "Blending", "Frying", "Grilling", "Seasoning", "Slicing", "Sauteing"]
-        pickerData = ["Whisk", "Peel", "Boil"]
+        pickerData = ["Whisk", "Peel", "Boil", "Slice", "Season"]
         
     }
     
