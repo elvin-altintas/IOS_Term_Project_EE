@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TipViewController: UIViewController {
+class TipViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var recipeDataSource = RecipeDataSource()
 
@@ -21,8 +21,11 @@ class TipViewController: UIViewController {
         super.viewDidLoad()
         
         recipeDataSource.delegate = self
-
-        pickerData = ["Chopping", "Peeling", "Baking", "Boiling", "Blending", "Frying", "Grilling", "Seasoning", "Slicing", "Sauteing"]
+        self.tipPicker.dataSource = self
+        self.tipPicker.delegate = self
+        
+        //pickerData = ["Chopping", "Peeling", "Baking", "Boiling", "Blending", "Frying", "Grilling", "Seasoning", "Slicing", "Sauteing"]
+        pickerData = ["Whisk", "Peel", "Boil"]
         
     }
     
@@ -38,28 +41,23 @@ class TipViewController: UIViewController {
         return pickerData[row]
     }
     
-    // Select edildiğinde aktive olan yer burası -> data load eklenecek
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedTip = pickerData[row]
         print(selectedTip)
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //Passes the selected tip as string to the animation view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let tip = selectedTip
+        let animationViewController = segue.destination as! AnimationViewController
+        animationViewController.selectedTip = tip
     }
-    */
-
 }
-
+    
 
 extension TipViewController: RecipeDataSourceDelegate {
-    
     func recipeListLoaded() {}
     func suggestedRecipeLoaded(recipe: Recipe) {}
 }

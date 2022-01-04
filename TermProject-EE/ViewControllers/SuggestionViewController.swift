@@ -47,7 +47,6 @@ class SuggestionViewController: UIViewController, UIPickerViewDelegate, UIPicker
         return pickerData[row]
     }
     
-    // Select edildiğinde aktive olan yer burası -> data load eklenecek
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedMealType = pickerData[row]
         recipeDataSource.loadSuggestedRecipe(mealType: selectedMealType)

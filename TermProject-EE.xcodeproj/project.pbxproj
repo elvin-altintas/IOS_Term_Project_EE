@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0E10A12783874C006D672A /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E10A02783874C006D672A /* Animation.swift */; };
 		7B1AE69627791782001D2560 /* RecipeDataSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1AE69527791782001D2560 /* RecipeDataSourceDelegate.swift */; };
 		7B1AE6982779183C001D2560 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1AE6972779183C001D2560 /* Recipe.swift */; };
 		7BFB4B612776076A007B17D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB4B602776076A007B17D8 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B0E10A02783874C006D672A /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		7B1AE69527791782001D2560 /* RecipeDataSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataSourceDelegate.swift; sourceTree = "<group>"; };
 		7B1AE6972779183C001D2560 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		7BFB4B5D2776076A007B17D8 /* TermProject-EE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TermProject-EE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				7BFB4B8D277629ED007B17D8 /* RecipeDataSource.swift */,
 				7B1AE69527791782001D2560 /* RecipeDataSourceDelegate.swift */,
 				7B1AE6972779183C001D2560 /* Recipe.swift */,
+				7B0E10A02783874C006D672A /* Animation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				7BFB4B7A27761179007B17D8 /* SuggestionViewController.swift in Sources */,
 				7BFB4B80277611E2007B17D8 /* TipViewController.swift in Sources */,
 				7B1AE6982779183C001D2560 /* Recipe.swift in Sources */,
+				7B0E10A12783874C006D672A /* Animation.swift in Sources */,
 				7B1AE69627791782001D2560 /* RecipeDataSourceDelegate.swift in Sources */,
 				7BFB4B632776076A007B17D8 /* SceneDelegate.swift in Sources */,
 				7BFB4B89277617C2007B17D8 /* DishDetailViewController.swift in Sources */,

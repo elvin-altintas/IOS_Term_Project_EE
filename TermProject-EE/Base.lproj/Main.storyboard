@@ -82,14 +82,47 @@
                     <view key="view" contentMode="scaleToFill" id="QlP-5o-EDN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RFk-3h-kh5">
+                                <rect key="frame" x="0.0" y="341" width="233" height="257"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ypg-ZV-Xp6">
+                                <rect key="frame" x="18" y="281.5" width="378" height="387"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ypg-ZV-Xp6" secondAttribute="height" multiplier="373:382" id="Qs2-ZR-BsY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNc-vN-tLN">
+                                <rect key="frame" x="40" y="160" width="335" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="drm-7p-iXF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ypg-ZV-Xp6" firstAttribute="top" secondItem="drm-7p-iXF" secondAttribute="top" constant="193.5" id="29p-jT-Nvt"/>
+                            <constraint firstItem="RFk-3h-kh5" firstAttribute="top" secondItem="ypg-ZV-Xp6" secondAttribute="bottom" constant="-327.5" id="8gS-iQ-9mL"/>
+                            <constraint firstItem="pNc-vN-tLN" firstAttribute="top" secondItem="drm-7p-iXF" secondAttribute="top" constant="72" id="8qA-en-r2S"/>
+                            <constraint firstItem="pNc-vN-tLN" firstAttribute="centerX" secondItem="drm-7p-iXF" secondAttribute="centerX" id="PaT-y9-vrt"/>
+                            <constraint firstItem="RFk-3h-kh5" firstAttribute="centerY" secondItem="ypg-ZV-Xp6" secondAttribute="centerY" constant="-5.5" id="USO-YG-hh8"/>
+                            <constraint firstItem="ypg-ZV-Xp6" firstAttribute="centerY" secondItem="drm-7p-iXF" secondAttribute="centerY" id="WT3-rm-GGh"/>
+                            <constraint firstItem="ypg-ZV-Xp6" firstAttribute="centerX" secondItem="drm-7p-iXF" secondAttribute="centerX" id="baS-Yq-7vB"/>
+                            <constraint firstItem="RFk-3h-kh5" firstAttribute="width" secondItem="ypg-ZV-Xp6" secondAttribute="height" multiplier="203:387" constant="30" id="t8r-Ji-GOh"/>
+                            <constraint firstItem="ypg-ZV-Xp6" firstAttribute="leading" secondItem="RFk-3h-kh5" secondAttribute="trailing" constant="-215" id="wht-Dj-Abx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fNK-O9-Z7f"/>
+                    <connections>
+                        <outlet property="animationView" destination="ypg-ZV-Xp6" id="ca6-Fs-cIi"/>
+                        <outlet property="potatoView" destination="RFk-3h-kh5" id="VTn-ll-iS1"/>
+                        <outlet property="tipLabel" destination="pNc-vN-tLN" id="UZK-P7-KC5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSM-yg-yjj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1671" y="68"/>
+            <point key="canvasLocation" x="1669.5652173913045" y="67.633928571428569"/>
         </scene>
         <!--Tip View Controller-->
         <scene sceneID="wJI-eW-3gy">
