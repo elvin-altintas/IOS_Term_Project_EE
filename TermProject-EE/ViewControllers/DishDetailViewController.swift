@@ -7,25 +7,49 @@
 
 import UIKit
 
-class DishDetailViewController: UIViewController {
+class DishDetailViewController: UIViewController{
+   
     
+    
+   
+    
+    var selectedRecipe : Recipe?
+    var recipeDatasource = RecipeDataSource()
+    
+    //@IBOutlet weak var dishNameLabel: UILabel!
     @IBOutlet weak var dishDetailImage: UIImageView!
     @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var recipeButton: UIButton!
     
     @IBAction func openRecipeLink(_ sender: UIButton) {
-        if let url = URL(string: "https://www.apple.com") {
-          UIApplication.shared.open(url, options: [:], completionHandler: nil)
-    }
-        
+        if let recipe = selectedRecipe{
+            if let url = URL(string: recipe.url) {
+              UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+            
+        }
+    
+    
+    
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Do any additional setup after loading the view.
+        recipeDatasource.delegate = self
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if let recipe = selectedRecipe{
+            self.dishDetailImage.downloaded(from: recipe.image)
+            self.title =  recipe.label
+            self.ingredientsLabel.text = recipe.dietLabels.joined(separator: " ")
+            let buttonText = "Detailed recipe can be found in: "
+            let websiteLink = String(recipe.url.split(separator: ".")[1])
+            self.recipeButton.setTitle((buttonText + websiteLink), for: .normal)
+        }
+    }
     
-
     /*
     // MARK: - Navigation
 
@@ -37,3 +61,12 @@ class DishDetailViewController: UIViewController {
     */
 
 }
+
+extension DishDetailViewController: RecipeDataSourceDelegate{
+    func recipeListLoaded() {
+    }
+
+    func suggestedRecipeLoaded(recipe: Recipe) {
+    }
+}
+

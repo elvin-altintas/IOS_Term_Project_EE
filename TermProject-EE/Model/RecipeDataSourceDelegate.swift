@@ -11,4 +11,5 @@ import UIKit
 protocol RecipeDataSourceDelegate {
     func recipeListLoaded()
     func suggestedRecipeLoaded(recipe: Recipe)
+   // func recipeDetailLoaded(recipeUrl: String)
 }

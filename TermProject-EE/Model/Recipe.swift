@@ -20,6 +20,15 @@ struct Image: Codable{
 }
 struct UpperRecipe:Codable{
     let recipe: Recipe
+    let _links: Link
+}
+
+struct Link:Codable{
+    let `self`: Href
+}
+
+struct Href:Codable{
+    let href: String
 }
 
 struct RecipeCountDict:Codable{

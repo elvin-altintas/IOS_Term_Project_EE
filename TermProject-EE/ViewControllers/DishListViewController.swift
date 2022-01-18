@@ -42,18 +42,32 @@ class DishListViewController: UIViewController {
         
     }
     
-
-    /*
+    func getRealIndex(indexPath: IndexPath) -> Int {
+        if (recipeDataSource.getNumberOfRecipes() == 0) {
+            return 0;
+        }
+        let realIndex = indexPath.row.quotientAndRemainder(dividingBy: recipeDataSource.getNumberOfRecipes()).remainder
+        return realIndex
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        let cell = sender as! DishTableViewCell
+        if let indexPath = self.DishTableView.indexPath(for: cell){
+            let recipe = recipeDataSource.getRecipeWithIndex(index: getRealIndex(indexPath: indexPath))
+            let recipeDetailViewController = segue.destination as! DishDetailViewController
+            recipeDetailViewController.selectedRecipe = recipe
+        }
+        
     }
-    */
-
+    
+  
 }
+
 
 extension DishListViewController: RecipeDataSourceDelegate {
     func recipeListLoaded() {

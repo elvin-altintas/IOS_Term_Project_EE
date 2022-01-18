@@ -18,6 +18,9 @@ class RecipeDataSource{
     //private var recipeArray: [Recipe] = []
     //var recipeArray: [Recipe] = []
     var suggestedRecipe: Recipe?
+    
+    //var recipeDetailURL: String?
+    
     private var recipeArray: [Recipe] = []
     private var mealType: String =  "Dinner"
     var delegate: RecipeDataSourceDelegate?
@@ -106,8 +109,29 @@ class RecipeDataSource{
             dataTask.resume()
         }
     }
-    
-    
+    /*
+    func loadRecipeDetail(recipeUrl: String) {
+        let urlSession = URLSession.shared
+        if let url = URL(string: recipeUrl){
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "GET"
+            let dataTask = urlSession.dataTask(with: urlRequest) { data, response, error in
+                let decoder = JSONDecoder()
+                if let data = data {
+                    let upperRecipeFromNetwork = try! decoder.decode(UpperRecipe.self, from: data)
+                    self.recipeDetailURL = upperRecipeFromNetwork._links.`self`.href
+                   // print(self.recipeArray)
+                //print(finalizedUrl)
+                        DispatchQueue.main.async {
+                            self.delegate?.recipeDetailLoaded(recipeUrl: self.recipeDetailURL )
+                        }
+
+                }
+            }
+            dataTask.resume()
+        }
+    }
+    */
     func loadSuggestedRecipe(mealType: String){
         let urlSession = URLSession.shared
         let finalizedURL = finalizeURLforSuggestion(currentURL: baseURL, mealType: mealType)

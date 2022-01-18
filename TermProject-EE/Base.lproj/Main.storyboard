@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cIf-ws-ZH5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cIf-ws-ZH5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,20 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMW-Tz-F3D">
-                                <rect key="frame" x="186" y="131" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reçel: The Recipe Generator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMW-Tz-F3D">
+                                <rect key="frame" x="60.5" y="123" width="293.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fd-yf-TrC">
-                                <rect key="frame" x="32" y="818" width="44" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
-                                <connections>
-                                    <segue destination="5HD-4q-ckw" kind="presentation" id="Xdn-oR-PZs"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSs-8I-Vyj">
                                 <rect key="frame" x="168.5" y="478" width="77.5" height="31"/>
                                 <state key="normal" title="Button"/>
@@ -55,6 +47,18 @@
                                     <segue destination="j3s-8H-EYA" kind="show" id="TNv-FK-nS1"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="recel_mainpage" translatesAutoresizingMaskIntoConstraints="NO" id="NsB-eu-ZHe">
+                                <rect key="frame" x="87" y="200" width="229" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fd-yf-TrC">
+                                <rect key="frame" x="51" y="792" width="44" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="5HD-4q-ckw" kind="presentation" id="Xdn-oR-PZs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="68"/>
+            <point key="canvasLocation" x="63.768115942028992" y="67.633928571428569"/>
         </scene>
         <!--Animation View Controller-->
         <scene sceneID="48C-d5-8fM">
@@ -507,44 +511,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IyE-PM-1Ab">
-                                <rect key="frame" x="50.5" y="169" width="313" height="341"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="IyE-PM-1Ab" secondAttribute="height" multiplier="56:61" id="zON-HA-KOa"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-jo-z39">
-                                <rect key="frame" x="165.5" y="118" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6a-9O-K9d">
-                                <rect key="frame" x="164" y="610" width="86" height="21"/>
+                                <rect key="frame" x="164" y="627.5" width="86" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDV-y8-nZ4">
-                                <rect key="frame" x="173.5" y="731" width="67" height="31"/>
+                                <rect key="frame" x="20" y="731" width="374" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                                 <connections>
                                     <action selector="openRecipeLink:" destination="lVY-sJ-Hni" eventType="touchUpInside" id="pxc-jO-OpU"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IyE-PM-1Ab">
+                                <rect key="frame" x="24.5" y="199" width="365" height="397.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IyE-PM-1Ab" secondAttribute="height" multiplier="56:61" id="zON-HA-KOa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5b1-pV-awA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JDV-y8-nZ4" firstAttribute="top" secondItem="Z6a-9O-K9d" secondAttribute="bottom" constant="100" id="74o-y3-TQc"/>
-                            <constraint firstItem="Z6a-9O-K9d" firstAttribute="top" secondItem="IyE-PM-1Ab" secondAttribute="bottom" constant="100" id="9xW-Jv-HVH"/>
-                            <constraint firstItem="sLF-jo-z39" firstAttribute="top" secondItem="5b1-pV-awA" secondAttribute="top" constant="30" id="E6f-W9-ioy"/>
-                            <constraint firstItem="sLF-jo-z39" firstAttribute="centerX" secondItem="5b1-pV-awA" secondAttribute="centerX" id="GcA-oe-IcK"/>
+                            <constraint firstItem="JDV-y8-nZ4" firstAttribute="top" secondItem="Z6a-9O-K9d" secondAttribute="bottom" constant="83" id="74o-y3-TQc"/>
+                            <constraint firstItem="Z6a-9O-K9d" firstAttribute="top" secondItem="IyE-PM-1Ab" secondAttribute="bottom" constant="31" id="9xW-Jv-HVH"/>
                             <constraint firstItem="JDV-y8-nZ4" firstAttribute="centerX" secondItem="5b1-pV-awA" secondAttribute="centerX" id="Jqr-is-1ru"/>
-                            <constraint firstItem="IyE-PM-1Ab" firstAttribute="top" secondItem="sLF-jo-z39" secondAttribute="bottom" constant="30" id="La8-Bw-Szz"/>
                             <constraint firstItem="5b1-pV-awA" firstAttribute="bottom" secondItem="JDV-y8-nZ4" secondAttribute="bottom" constant="100" id="Ofz-iv-1z9"/>
                             <constraint firstItem="Z6a-9O-K9d" firstAttribute="centerX" secondItem="5b1-pV-awA" secondAttribute="centerX" id="TAp-cp-kMn"/>
+                            <constraint firstItem="JDV-y8-nZ4" firstAttribute="leading" secondItem="5b1-pV-awA" secondAttribute="leading" constant="20" id="ZtP-HM-JYT"/>
+                            <constraint firstItem="IyE-PM-1Ab" firstAttribute="top" secondItem="5b1-pV-awA" secondAttribute="top" constant="111" id="img-AZ-mnh"/>
+                            <constraint firstItem="5b1-pV-awA" firstAttribute="trailing" secondItem="JDV-y8-nZ4" secondAttribute="trailing" constant="20" id="odu-55-JgM"/>
                             <constraint firstItem="IyE-PM-1Ab" firstAttribute="centerX" secondItem="5b1-pV-awA" secondAttribute="centerX" id="xty-eC-YLD"/>
                         </constraints>
                     </view>
@@ -552,6 +550,7 @@
                     <connections>
                         <outlet property="dishDetailImage" destination="IyE-PM-1Ab" id="90x-mJ-0f3"/>
                         <outlet property="ingredientsLabel" destination="Z6a-9O-K9d" id="P2X-EZ-K7w"/>
+                        <outlet property="recipeButton" destination="JDV-y8-nZ4" id="Rph-7D-fLb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8o-mh-XtZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -595,6 +594,7 @@
                                                 <constraint firstItem="Lvo-3d-HTO" firstAttribute="leading" secondItem="LeP-zT-uAT" secondAttribute="trailing" constant="100" id="3sR-8m-DfP"/>
                                                 <constraint firstItem="LeP-zT-uAT" firstAttribute="top" secondItem="Hl6-N9-bp5" secondAttribute="top" constant="20" id="EDA-VC-WZu"/>
                                                 <constraint firstItem="Lvo-3d-HTO" firstAttribute="centerY" secondItem="Hl6-N9-bp5" secondAttribute="centerY" id="JLE-AP-aHP"/>
+                                                <constraint firstItem="LeP-zT-uAT" firstAttribute="width" secondItem="Hl6-N9-bp5" secondAttribute="height" multiplier="42:95" id="Mas-oI-bLj"/>
                                                 <constraint firstItem="LeP-zT-uAT" firstAttribute="leading" secondItem="Hl6-N9-bp5" secondAttribute="leading" constant="20" id="Z1E-ur-Nzc"/>
                                                 <constraint firstAttribute="bottom" secondItem="LeP-zT-uAT" secondAttribute="bottom" constant="20" id="lz1-pN-bmH"/>
                                                 <constraint firstAttribute="trailing" secondItem="Lvo-3d-HTO" secondAttribute="trailing" constant="50" id="mXb-cX-LV7"/>
@@ -649,8 +649,24 @@
                     <view key="view" contentMode="scaleToFill" id="kr6-mj-NUm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Reçel: The Recipe Generator Info Screen All rights reserved. copyright © 2022 January" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G4d-xl-HNr">
+                                <rect key="frame" x="0.0" y="50" width="414" height="708"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CoT-dB-6dr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G4d-xl-HNr" firstAttribute="centerY" secondItem="CoT-dB-6dr" secondAttribute="centerY" id="1nV-ax-Z5o"/>
+                            <constraint firstItem="CoT-dB-6dr" firstAttribute="bottom" secondItem="G4d-xl-HNr" secondAttribute="bottom" constant="50" id="8Sh-G2-3AT"/>
+                            <constraint firstItem="G4d-xl-HNr" firstAttribute="leading" secondItem="CoT-dB-6dr" secondAttribute="leading" id="kHh-0f-X3j"/>
+                            <constraint firstItem="G4d-xl-HNr" firstAttribute="top" secondItem="CoT-dB-6dr" secondAttribute="top" constant="50" id="lsm-W9-N0B"/>
+                            <constraint firstItem="G4d-xl-HNr" firstAttribute="centerX" secondItem="CoT-dB-6dr" secondAttribute="centerX" id="r7K-0L-dD6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="T5W-RZ-0Fk"/>
                 </viewController>
@@ -660,6 +676,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="recel_mainpage" width="1200" height="1600"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
