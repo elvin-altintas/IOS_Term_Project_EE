@@ -19,7 +19,6 @@ class AnimationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(selectedTip)
         tipLabel.text = "This is how you " + selectedTip.uppercased() + "!"
         animationView.image = UIImage(named: selectedTip)
         potatoView.image = UIImage(named: "Potato")
@@ -47,14 +46,21 @@ class AnimationViewController: UIViewController {
             self.Slice()
         case "Season":
             self.Season()
+        case "":
+            self.Whisk()
         default:
-            print("Nothing selected!")
+            print("Tip selection error!")
         }
         
     }
     
+    /*private func rotate(rotationAngle: Double, imageView: UIImageView){
+        imageView.transform =  imageView.transform.rotated(by: rotationAngle)
+    }
     
-
+    private func upDownMotion(translation_x: CGFloat, translation_y: CGFloat, imageView: UIImageView){
+        imageView.transform = imageView.transform.translatedBy(x: translation_x, y: translation_y)
+    }*/
     
    private func Whisk1(){
        self.animationView.transform = self.animationView.transform.rotated(by: 1)

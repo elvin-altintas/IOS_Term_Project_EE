@@ -17,6 +17,7 @@ class TipViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     var pickerData: [String] = []
     var selectedTip: String = ""
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,8 +25,8 @@ class TipViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         self.tipPicker.dataSource = self
         self.tipPicker.delegate = self
         
-        //pickerData = ["Chopping", "Peeling", "Baking", "Boiling", "Blending", "Frying", "Grilling", "Seasoning", "Slicing", "Sauteing"]
         pickerData = ["Whisk", "Peel", "Boil", "Slice", "Season"]
+        selectedTip = String(pickerData.first!)
         
     }
     
